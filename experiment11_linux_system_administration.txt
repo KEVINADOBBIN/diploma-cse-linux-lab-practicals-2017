@@ -1,0 +1,38 @@
+#!/bin/bash
+# Experiment No-11: Linux System Administration
+# SU (Super User) tasks, disk management, mount/unmount
+
+# 1. Switch to superuser using sudo
+echo "Changing password for current user..."
+sudo passwd
+
+# 2. Switch to root
+echo "Switching to root user..."
+su -
+
+# 3. List all partitions using fdisk
+echo "Listing all disk partitions..."
+fdisk -l
+
+# 4. Check size of a specific partition (example: /dev/sda2)
+echo "Checking size of /dev/sda2..."
+fdisk -s /dev/sda2
+
+# 5. Launch fdisk to interactively view/manage partitions
+echo "Interactive partition management (fdisk /dev/sda)..."
+fdisk /dev/sda <<EOF
+p    # Print partition table
+q    # Quit fdisk without saving changes
+EOF
+
+# 6. List currently mounted ext4 file systems
+echo "Listing mounted ext4 file systems..."
+mount -t ext4
+
+# 7. Unmount all file systems (careful: may fail if in use)
+echo "Attempting to unmount all file systems..."
+umount -a || echo "Some mounts are busy. Use 'lsof' or 'fuser' to identify."
+
+# 8. Disk usage summary
+echo "Showing disk usage..."
+du -h --max-depth=1 /   # Adjust path as needed
