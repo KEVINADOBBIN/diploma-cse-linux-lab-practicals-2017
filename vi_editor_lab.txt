@@ -1,0 +1,67 @@
+############################################################
+# Lab Record: VI Editor in Linux
+# File Name: vi_editor_lab.txt
+############################################################
+
+# Step 1: Open Terminal
+# (Open GitHub Codespace → Terminal → New Terminal)
+echo "Step 1: Terminal opened in GitHub Codespace"
+
+# Step 2: Create a file named 'unix' using VI
+echo "Step 2: Creating file 'unix' using vi editor"
+echo "Type 'vi unix' in terminal and press Enter"
+# Command to run manually:
+# vi unix
+
+# Step 3: Enter Input Mode in VI
+echo "Step 3: Press 'i' to enter input mode in vi editor"
+echo "Type the following text in the editor:"
+echo "welcome to linux world. Linux OS belongs to the GNU public license."
+echo "It provides access to source code for all users."
+
+# Step 4: Exit Input Mode
+echo "Step 4: Press 'Esc' to return to command mode in vi editor"
+
+# Step 5: Save and Exit (Ex Mode)
+echo "Step 5: Type ':wq' and press Enter to save and exit"
+
+# Step 6: Verify file content
+echo "Step 6: Verify file content"
+cat unix
+echo "Expected Output:"
+echo "welcome to linux world. Linux OS belongs to the GNU public license."
+echo "It provides access to source code for all users."
+
+# Step 7: Create another file named 'unix1'
+echo "Step 7: Creating file 'unix1' using vi editor"
+echo "Type 'vi unix1' in terminal and press Enter"
+# Command to run manually:
+# vi unix1
+
+# Step 8: Enter Input Mode and add text
+echo "Press 'i' and type the following:"
+echo "The user need not belong to any special category to access the source code."
+echo "Linux is open source and community driven."
+
+# Step 9: Exit Input Mode and Save & Exit
+echo "Press 'Esc' then type ':wq' to save and exit"
+
+# Step 10: Verify file content
+echo "Step 10: Verify file content of unix1"
+cat unix1
+echo "Expected Output:"
+echo "The user need not belong to any special category to access the source code."
+echo "Linux is open source and community driven."
+
+############################################################
+# VI Editor Commands Summary
+############################################################
+echo "Three Modes of VI Editor:"
+echo "1) Input Mode: i,a,I,o,r"
+echo "2) Command Mode: h,l,k,j,0,$,w,b,yy,p"
+echo "3) Ex Mode: :w, :q, :wq, :x, :q!"
+
+echo "Viva Tips:"
+echo "- VI starts in command mode"
+echo "- Esc returns to command mode"
+echo "- :q! exits without saving"
